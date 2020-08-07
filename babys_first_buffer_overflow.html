@@ -58,16 +58,16 @@
    <section class="ftco-section ftco-degree-bg"> <!-- blog contents -->
       <div class="container">
         <div class="row">
-          <div class="col-lg-8 ftco-animate">
+          <div class="col-lg-12 ftco-animate">
             <h2 class="mb-3">Before we Begin</h2>
             <p>I want to mention that I am by no means an expert, and even in the process of this write-up I ran into an issue that I could only take a guess as to why the error happened. We'll get into that later.
             For now, I'll assume you have no knowledge of assembly and no knowledge of memory management (where programs store things during execution). A slight understanding of both is needed to understand the steps taken here, and if you really want to get
             the full benefit of this write-up and exercise, I recommend you read up on both.</p>
             <br>
             <h2 class="mb-3 mt-5">Begin!</h2>
-            <p class="mb-5">
-              <img src="images/BOTHM_Start.png" alt="" class="img-fluid">
-            </p>
+            
+              <img src="images/BOTHM_Start.png" alt="" class="img-fluid" >
+            
             <p class="mb-5">
               <img src="images/BOTHM_creds.png" alt="" class="img-fluid">
             </p>
@@ -79,9 +79,9 @@
               <img src="images/BOsshntest.png" alt="" class="img-fluid">
             </p>
             <p> We'll log in via ssh with the credential they gave us above. The program we are going to concern ourselves with is named "buffer-overflow-2" inside of the <b>overflow-4</b> directory.</p>
-            <p>Odit voluptatibus, eveniet vel nihil cum ullam dolores laborum, quo velit commodi rerum eum quidem pariatur! Quia fuga iste tenetur, ipsa vel nisi in dolorum consequatur, veritatis porro explicabo soluta commodi libero voluptatem similique id quidem? Blanditiis voluptates aperiam non magni. Reprehenderit nobis odit inventore, quia laboriosam harum excepturi ea.</p>
-            <p>Adipisci vero culpa, eius nobis soluta. Dolore, maxime ullam ipsam quidem, dolor distinctio similique asperiores voluptas enim, exercitationem ratione aut adipisci modi quod quibusdam iusto, voluptates beatae iure nemo itaque laborum. Consequuntur et pariatur totam fuga eligendi vero dolorum provident. Voluptatibus, veritatis. Beatae numquam nam ab voluptatibus culpa, tenetur recusandae!</p>
-            <p>Voluptas dolores dignissimos dolorum temporibus, autem aliquam ducimus at officia adipisci quasi nemo a perspiciatis provident magni laboriosam repudiandae iure iusto commodi debitis est blanditiis alias laborum sint dolore. Dolores, iure, reprehenderit. Error provident, pariatur cupiditate soluta doloremque aut ratione. Harum voluptates mollitia illo minus praesentium, rerum ipsa debitis, inventore?</p>
+            <p>Every time you start trying to pentest anything, a good habit is to take the "happy path", which means to try to use the application/program normally. In the screenshot above, you can see that I try to run the program without any arguments. We get a segmentation fault, so that probably means we should provide some arguments to it.</p>
+            <p>Although for this example I could have examined the source code of the program, I wanted to go through it as if it was a real scenario, and we didn't have access to that. Once the program was supplied with an argument, we can see it returns <b>doggo</b> appended to whatever input you supply it.</p>
+            <p>Nice! That means the program accepts string input, and we should test it for a buffer overflow vulnerability.
             <div class="tag-widget post-tag-container mb-5 mt-5">
               <div class="tagcloud">
                 <a href="#" class="tag-cloud-link">Security</a>
