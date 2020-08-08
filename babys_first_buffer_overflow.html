@@ -79,7 +79,7 @@
             <p class="mb-5">
               <img src="images/BOsshntest.png" alt="" class="img-fluid">
             </p>
-            <p style="font-size:1vw"> We'll log in via ssh with the credential they gave us above. The program we are going to concern ourselves with is named "buffer-overflow-2" inside of the <b>overflow-4</b> directory.</p>
+            <p style="font-size:30px"> We'll log in via ssh with the credential they gave us above. The program we are going to concern ourselves with is named "buffer-overflow-2" inside of the <b>overflow-4</b> directory.</p>
             <p>Every time you start trying to pentest anything, a good habit is to take the "happy path", which means to try to use the application/program normally. In the screenshot above, you can see that I try to run the program without any arguments. We get a segmentation fault, so that probably means we should provide some arguments to it.</p>
             <p>Although for this example I could have examined the source code of the program, I wanted to go through it as if it was a real scenario, and we didn't have access to that. Once the program was supplied with an argument, we can see it returns <b>doggo</b> appended to whatever input you supply it.</p>
             <p>Nice! That means the program accepts string input, and we should test it for a buffer overflow vulnerability.</p>
